@@ -12,15 +12,11 @@
         <div class="container">
             <div>
                 <h1 class="title">Tarefas do Dia</h1>
-                <ul id="list"></ul>
+                <ol id="list" type="I"></ol>
             </div>
             <div class="addTask">
-                <input
-                type="text"
-                id="task_name"
-                name="task_name"
-                placeholder="Nome da Tarefa"
-                />
+                <input type="text" id="task_name" name="task_name" placeholder="Nome da Tarefa"/>
+                <input type="time" id="task_time" name="task_time"/>
                 <button onclick="addNewTask()">Adicionar</button>
             </div>
         </div>

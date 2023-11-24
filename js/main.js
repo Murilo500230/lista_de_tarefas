@@ -1,18 +1,22 @@
 function addNewTask() {
-    var list = document.getElementById("list");
-    var text = document.getElementById("task_name");
+    let list = document.getElementById("list");
+    let taskName = document.getElementById("task_name");
+    let taskTime = document.getElementById("task_time");
 
-    if(text.value.length === 0) {
-        alert('Rapaz ele tá sem zap');
+    if(taskName.value.length === 0 || taskTime.value.length === 0) {
+        alert("Rapaz ele tá sem zap");
         return;
     }
 
-    var listItem = document.createElement("li");
+    let listItem = document.createElement("li");
     listItem.className = "list-item";
 
-    const textElement = document.createTextNode(text.value);
-    listItem.appendChild(textElement);
+    let text = taskName.value + " | " + taskTime.value;
+
+    const taskNameElement = document.createTextNode(text);
+    listItem.appendChild(taskNameElement);
     list.appendChild(listItem)
     
-    text.value = '';
+    taskName.value = "";
+    taskTime.value = "";
 }
